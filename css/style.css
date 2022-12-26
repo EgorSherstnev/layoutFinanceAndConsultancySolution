@@ -147,6 +147,8 @@ body {
 }
 .page__subscribe {
 }
+.page__getintouch {
+}
 /*----HEADER-BLOCK-----------------------------------------------------------------*/
 .header-block {
     text-align: center;
@@ -672,21 +674,35 @@ body {
 }
 /*---SUBSCRIBE------------------------------------------------------------------------------------*/
 .subscribe {
+    position: relative;
+    padding: 0px 0px 20px 0px;
+}
+.subscribe::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 77px;
+    left: 0;
+    background: #252B42;
 }
 .subscribe__container {
 }
 .subscribe__body {
-    margin: 0px 30px;
-    display: flex;
+    position: relative;
+    z-index: 2;
     justify-content: space-between;
     padding: 30px 40px 30px 50px;
     align-items: center;
     background-color: #17213C;
     border-radius: 2px;
 }
+@media (min-width: 1070px) {
+    .subscribe__body {
+        margin: 0px 30px;
+    }
+}
 .subscribe__title {
-    
-    max-width: 266px;
     font-weight: 700;
     font-size: 24px;
     line-height: 133%;
@@ -698,12 +714,31 @@ body {
 
     color: #FFFFFF;
 }
+@media (max-width: 810px) {
+    .subscribe__title {
+        margin: 0px 0px 20px 0px;
+    }
+    .subscribe__body {
+        margin: 0px -15px;
+        padding: 20px 15px;
+    }
+}
+@media (min-width: 810px) {
+    .subscribe__body {
+        display: flex;
+        justify-content: space-between;
+    }
+    .subscribe__title {
+        max-width: 266px;
+    }
+}
 .subscribe__form {
     flex: 0 1 50%;
     display: flex;
     align-items: center;
 }
 .subscribe__input {
+    width: 100%;
     color: #737373;
     flex: 1 1 auto;
     min-height: 58px;
@@ -727,4 +762,43 @@ body {
     text-align: center;
     color: #FFFFFF;
     padding: 0px 22px;
+}
+@media (max-width: 810px) {
+    .subscribe__button {
+        padding: 0px 15px;
+    }
+    .subscribe__input {
+        padding: 0px 15px;
+    }
+}
+/*---GETINTOUCH-------------------------------------------------------------------*/
+.getintouch {
+    padding: 80px 0px 135px 0px;
+}
+.getintouch__container {
+}
+.getintouch__header {
+    margin: 0px 0px 80px 0px;
+}
+.getintouch__items {
+    display: flex;
+    align-items: center;
+}
+.getintouch__item {
+}
+.item-getintouch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.item-getintouch__icon {
+}
+.item-getintouch__emails {
+}
+.item-getintouch__email {
+}
+.item-getintouch__label {
+}
+.item-getintouch__button {
 }
